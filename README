@@ -1,0 +1,9 @@
+
+test.auto.tfvars file:
+
+location="westeurope"
+environment="dev2"
+environment_version="1.0"
+key_vault_sku="premium"
+subscription_id=
+sp_dbw_object_id=
