@@ -36,15 +36,11 @@ provider "azurecaf" {
 }
 
 provider "databricks" {
-  host = data.azurerm_databricks_workspace.databricks_workspace.workspace_url
+  host                        = azurerm_databricks_workspace.databricks_workspace.workspace_url
 }
 
 data "azurerm_client_config" "current" {}
 
-data "azurerm_databricks_workspace" "databricks_workspace" {
-  name                = azurerm_databricks_workspace.databricks_workspace.name
-  resource_group_name = azurerm_resource_group.rg.name
-}
 
 data "azurerm_key_vault" "kv" {
   name                = azurerm_key_vault.kv.name
